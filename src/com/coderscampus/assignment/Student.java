@@ -70,6 +70,12 @@ public class Student implements Comparable<Student> {
 	}
 
 	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", courseName=" + courseName
+				+ ", grade=" + grade + "]";
+	}
+
+	@Override
 	public int compareTo(Student otherStudent) {
 		if ((this.grade > otherStudent.grade) || (otherStudent.getGrade() == null)) {
 			return -1;
