@@ -6,12 +6,13 @@ import java.io.IOException;
 public class StudentApplication {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
-		StudentServices studentservices = new StudentServices();
+		StudentService studentservice = new StudentService();
 
-		studentservices.splitStudentsByCourse();
+		studentservice.splitStudentByCourse();
+		studentservice.saveStudentToFile();
 
-		studentservices.printStudentsByCourses("course1.csv");
-		studentservices.printStudentsByCourses("course2.csv");
-		studentservices.printStudentsByCourses("course3.csv");
+		studentservice.printStudentsByCourse("course1.csv");
+		studentservice.printStudentsByCourse("course2.csv");
+		studentservice.printStudentsByCourse("course3.csv");
 	}
 }
